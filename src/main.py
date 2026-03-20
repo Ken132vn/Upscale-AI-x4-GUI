@@ -88,7 +88,7 @@ def resource_path(relative_path):
 class UpscaleAppLite:
     def __init__(self, master):
         self.master = master
-        self.master.title("Image Upscaler FP16")
+        self.master.title("Upscale Lite x4 - FP16 GUI")
         self.master.geometry("1000x850")
 
         self.tile_size_var = tk.IntVar(value=256)
