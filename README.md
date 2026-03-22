@@ -4,14 +4,6 @@ High-performance image upscaler optimized for low-to-mid end GPUs using ONNX Run
 
 UpscaleLite-FP16 is a lightweight, portable solution designed to provide high-quality image magnification while maintaining extreme stability on hardware with limited resources, such as integrated graphics (Intel Iris Xe/UHD, AMD Radeon) and entry-level dedicated GPUs.
 
-## Features
-
-  - **Built-in Native GUI:** A clean, distraction-free interface powered by Tkinter. It offers a seamless "point-and-click" experience for both single-file and batch processing without the overhead of heavy web-based frameworks.
-  - **Universal Hardware Acceleration:** Leverages the DirectML execution provider to support cross-vendor hardware acceleration. High-speed inference is available natively on Nvidia, AMD, and Intel silicon without the need for complex driver configurations.
-  - **Advanced VRAM Efficiency:** Includes an automated FP32 to FP16 (Half-Precision) conversion engine. This optimization reduces the memory footprint by approximately 50%, enabling high-quality upscaling on devices that typically struggle with AI workloads.
-  - **Smart Stability Logic:** Implements proactive VRAM detection and dynamic Out-of-Memory (OOM) protection. The application automatically calculates safe tile sizes and executes a recursive retry mechanism if memory limits are reached, preventing application crashes during heavy processing.
-  - **Asynchronous Threaded Engine:** Built on a non-blocking background architecture. The GUI remains fully responsive during inference, providing real-time progress updates, ETA tracking, and safe operation cancellation.
-
 ## Interface & Comparison
 
 ![Application GUI](GUI.png)
@@ -20,6 +12,15 @@ UpscaleLite-FP16 is a lightweight, portable solution designed to provide high-qu
 ![Before and After Comparison](be-af.png)
 *Figure 2: Visual comparison between original low-resolution image and x4 upscaled result.*
 re
+
+## Features
+
+  - **Built-in Native GUI:** A clean, distraction-free interface powered by Tkinter. It offers a seamless "point-and-click" experience for both single-file and batch processing without the overhead of heavy web-based frameworks.
+  - **Universal Hardware Acceleration:** Leverages the DirectML execution provider to support cross-vendor hardware acceleration. High-speed inference is available natively on Nvidia, AMD, and Intel silicon without the need for complex driver configurations.
+  - **Advanced VRAM Efficiency:** Includes an automated FP32 to FP16 (Half-Precision) conversion engine. This optimization reduces the memory footprint by approximately 50%, enabling high-quality upscaling on devices that typically struggle with AI workloads.
+  - **Smart Stability Logic:** Implements proactive VRAM detection and dynamic Out-of-Memory (OOM) protection. The application automatically calculates safe tile sizes and executes a recursive retry mechanism if memory limits are reached, preventing application crashes during heavy processing.
+  - **Asynchronous Threaded Engine:** Built on a non-blocking background architecture. The GUI remains fully responsive during inference, providing real-time progress updates, ETA tracking, and safe operation cancellation.
+
 ## Technical Requirements
 
   - **Operating System:** Windows 10 or 11 (64-bit).
